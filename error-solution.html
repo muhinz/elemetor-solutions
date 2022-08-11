@@ -4,17 +4,17 @@
 -->
 
 <!-- main code  -->
-<!-- $reflection = new \ReflectionClass( $class_name ); //45 line
+$reflection = new \ReflectionClass( $class_name ); //45 line
 $method = $reflection->getMethod( 'get_site_editor_type' );
 
 // It's own method, use it.
 if ( $class_name === $method->class ) {
     return static::get_site_editor_type();
-} -->
+}
 
 <!-- ======= Replace with ====== -->
 
-<!-- if (method_exists($class_name, "get_site_editor_type")) {
+if (method_exists($class_name, "get_site_editor_type")) {
     $reflection = new \ReflectionClass( $class_name );
     $method = $reflection->getMethod( 'get_site_editor_type' );
     
@@ -22,4 +22,4 @@ if ( $class_name === $method->class ) {
     if ( $class_name === $method->class ) {
         return static::get_site_editor_type();
     }
-} -->
+}
