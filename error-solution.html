@@ -1,0 +1,25 @@
+<!-- Error: Fatal error: Uncaught ReflectionException: Method get_site_editor_type does not exist -->
+<!-- 
+    1. I solved this similarly to Mayous. I simply commented out the line in /wp-content/plugins/elementor-pro/modules/theme-builder/theme-document.php. So line 47 
+-->
+
+<!-- main code  -->
+<!-- $reflection = new \ReflectionClass( $class_name ); //45 line
+$method = $reflection->getMethod( 'get_site_editor_type' );
+
+// It's own method, use it.
+if ( $class_name === $method->class ) {
+    return static::get_site_editor_type();
+} -->
+
+<!-- ======= Replace with ====== -->
+
+<!-- if (method_exists($class_name, "get_site_editor_type")) {
+    $reflection = new \ReflectionClass( $class_name );
+    $method = $reflection->getMethod( 'get_site_editor_type' );
+    
+    // It's own method, use it.
+    if ( $class_name === $method->class ) {
+        return static::get_site_editor_type();
+    }
+} -->
